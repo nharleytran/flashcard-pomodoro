@@ -15,7 +15,6 @@ const axiosInstance = axios.create({
 
   async function getDeck(id) {
     try {
-      console.log(id);
       const response = await axiosInstance.get(`/decks/${id}`);
       return response.data.data;
     } catch (err) {
@@ -57,9 +56,9 @@ const axiosInstance = axios.create({
       throw err;
     }
   }
-  async function createFlashcard(deckId, flashcard) {
+  async function createFlashcard(deckId, front, back) {
     try {
-      const response = await axiosInstance.post(`/decks/${deckId}/flashcards`, flashcard);
+      const response = await axiosInstance.post(`/decks/${deckId}/flashcards`, {front: front, back: back});
       return response.data;
     } catch (err) {
       throw err;

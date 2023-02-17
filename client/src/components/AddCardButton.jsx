@@ -4,9 +4,10 @@ import "../App.css";
 import * as deckApi from "../api";
 
 function AddCardButton(props) {
-  const {setDecks} = props;
+  const {id, setDecks} = props;
   const [isOpen, setIsOpen] = useState(false);
-  const [textValue, setTextValue] = useState("");
+  const [frontValue, setFrontValue] = useState("");
+  const [backValue, setBackValue] = useState("");
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -18,9 +19,7 @@ function AddCardButton(props) {
 
   const handleSubmit = async () => {
     try {
-      await deckApi.createDeck(textValue);
-      var alldecks = await deckApi.getAllDecks();
-      setDecks(alldecks);
+      await deckApi.createFlashcard(id, frontValue, backValue);
       setIsOpen(false);
     } catch (err) {
       console.error(err);
@@ -33,7 +32,7 @@ function AddCardButton(props) {
         +
       </Button>
       <Modal
-        title="Name your deck here"
+        title="Insert information for your card here"
         opened={isOpen}
         onClose={handleClose}
         closeButtonLabel="Close"
@@ -45,8 +44,13 @@ function AddCardButton(props) {
       >
         <input
           type="text"
-          value={textValue}
-          onChange={(e) => setTextValue(e.target.value)}
+          value={frontValue}
+          onChange={(e) => setFrontValue(e.target.value)}
+        />
+        <input
+          type="text"
+          value={backValue}
+          onChange={(x) => setBackValue(x.target.value)}
         />
         <Button key="submit" onClick={handleSubmit} className="login-button">
           Submit

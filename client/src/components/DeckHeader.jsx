@@ -19,7 +19,7 @@ function DeckHeader(props) {
 
   return (
     <div className="header">
-      <Text size="lg" weight={700} sx={{ fontSize: '29px' }}>
+      <Text size="lg" weight={700} sx={{ fontSize: '29px' }} className="header-text">
         {deck.name}
       </Text>
       <Link to={'/'}>

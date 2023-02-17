@@ -4,10 +4,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #fcfcfc;
+}
+
+.header-text {
+  font-weight: bold;
+  color: white;
+  font-size: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .header {
+  background: rgb(98, 93, 194);
+  background: linear-gradient(90deg, rgba(66, 64, 110, 0.781) 0%, rgb(162, 162, 206) 35%, rgb(103, 99, 119) 100%);
   position: fixed;
   top: 0;
   display: flex;
@@ -21,10 +31,12 @@
 }
 
 .login-button {
+  font-family: "Lucida Console", "Courier New", monospace;
   margin-left: 16px;
 }
 
 .deck-button {
+  font-family: "Lucida Console", "Courier New", monospace;
   height: 40px;
   width: 100px;
 }
@@ -50,7 +62,7 @@
   height: 300px;
   margin: 16px;
   padding: 24px;
-  background-color: #0b667c;
+  background-color: #3b0d619f;
   color: white;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -81,12 +93,14 @@
   text-align: center;
 }
 .deck-title {
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 36px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .study-button {
+  font-family: "Lucida Console", "Courier New", monospace;
   margin-top: auto;
 }
 
@@ -115,7 +129,7 @@
   height: 450px;
   margin: 16px;
   padding: 24px;
-  background-color: #9de4f857;
+  background-color: #9de4f81f;
   color: rgb(0, 0, 0);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -143,8 +157,7 @@
   justify-content: center;
   align-items: center;
   color:#000000;
-  background-color: #9de4f857;
-  border: 0.5px solid rgb(221, 216, 240);
+  background-color: #9de4f8a2;
 }
 
 .flash-card__actions {
@@ -153,7 +166,25 @@
   margin-top: 20px;
 }
 
+.card-front {
+  color: rgb(30, 40, 128);
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 26px;
+  font-weight: bolder;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card-back {
+  color: rgb(30, 40, 128);
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .trashcan-button {
   margin-left: 16px;
-  background-color: #1f237e44;
+  background-color: #0b667c;
 }

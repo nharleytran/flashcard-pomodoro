@@ -4,7 +4,7 @@ import '../App.css';
 function Header() {
   return (
     <div className="header">
-    <Text size="lg" weight={700} sx={{ fontSize: '29px' }}>
+    <Text size="lg" weight={700} sx={{ fontSize: '29px' }} className="header-text">
       The Flashcard App
     </Text>
     <Button variant="outline" color="error" className="login-button">

@@ -14,10 +14,10 @@ function Cards(props) {
     deckApi.getAllFlashcards(id).then((cards) => setCards(cards));
   }, [cards]);
 
-  const handleDelete = async (deckId) => {
+  const handleDelete = async (cardId) => {
     try {
-      await deckApi.deleteDeck(deckId);
-      const newDecks = decks.filter((deck) => deck._id !== deckId);
+      await deckApi.deleteFlashcard(id, cardId);
+      const newCards = cards.filter((card) => card._id !== cardId);
       setCards(newCards);
     } catch (err) {
       console.error(err);
@@ -31,14 +31,23 @@ function Cards(props) {
   return (
     <div className="decks-container">
       {cards.map((card) => (
-        <Card className="flash-card" shadow="sm">
+        <Card key={card._id} className="flash-card" shadow="sm">
+          <Button
+            size="md"
+            variant="light"
+            color="gray"
+            className="trashcan-button"
+            onClick={() => handleDelete(card._id)}
+          >
+            <AiOutlineDelete size={20} />
+          </Button>
           <div className="flash-card-fb">
-            <Text size="xl" weight={700} className="flash-card__title">
+            <Text size="xl" weight={700} className="card-front">
               {card.front}
             </Text>
           </div>
           <div className="flash-card-fb">
-            <Text size="xl" weight={700} className="flash-card__title">
+            <Text size="xl" weight={700} className="card-back">
               {card.back}
             </Text>
           </div>
@@ -47,13 +56,14 @@ function Cards(props) {
               size="md"
               variant="gradient"
               gradient={{ from: "teal", to: "lime", deg: 105 }}
+              className="deck-button"
             >
               Edit
             </Button>
           </div>
         </Card>
       ))}
-      <AddCardButton setCards={setCards} />
+      <AddCardButton id={id} setCards={setCards} />
     </div>
   );
 }
