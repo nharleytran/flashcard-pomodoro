@@ -1,12 +1,7 @@
-import express from "express";
+import app from "./src/index.js";
 
-const PORT = 3000;
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Welcome to Flashcard API");
-});
+const PORT = process.env.PORT || 5050;
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+  console.log(`Flashcard API at http://localhost:${PORT}/`);
 });
