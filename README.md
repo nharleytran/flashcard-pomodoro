@@ -5,7 +5,7 @@ Harley Tran
 ntran27
 B94A1F
 
-### Detailed instruction on how to run the app locally:
+## Detailed instruction on how to run the app locally: ##
 (This app was not deployed, so I have included the .env file on my repo even though this might not be best practice.)
 
 Run the following command in Terminal, I recommend to split terminal, one for Backend and one for Frontend
@@ -23,7 +23,7 @@ Click on the link generated to view the webapp
 
 There might be some issue with if you dont have the same dependencies, so feel free to run yarn install/ npm install 
 
-### Detailed infromation the Flashcard App:
+## Infromation about the Flashcard App: ##
 
 # Functionality
  
