@@ -56,6 +56,16 @@ const axiosInstance = axios.create({
       throw err;
     }
   }
+
+  async function getFlashcard(deckid, cardid) {
+    try {
+      const response = await axiosInstance.get(`/decks/${deckid}/flashcards/${cardid}`);
+      return response.data;
+    } catch (err) {
+      throw err;
+    }
+  }
+
   async function createFlashcard(deckId, front, back) {
     try {
       const response = await axiosInstance.post(`/decks/${deckId}/flashcards`, {front: front, back: back});
@@ -65,9 +75,9 @@ const axiosInstance = axios.create({
     }
   }
 
-  async function updateFlashcard (deckId, flashcardId, flashcard) {
+  async function updateFlashcard (deckId, flashcardId, front, back) {
     try {
-      const response = await axiosInstance.put(`/decks/${deckId}/flashcards/${flashcardId}`, flashcard);
+      const response = await axiosInstance.put(`/decks/${deckId}/flashcards/${flashcardId}`, {front: front, back: back});
       return response.data;
     } catch (err) {
       throw err;
@@ -83,4 +93,4 @@ const axiosInstance = axios.create({
     }
   }
 
-  export { getAllDecks, getDeck, createDeck, updateDeck, deleteDeck, getAllFlashcards, createFlashcard, updateFlashcard, deleteFlashcard };
+  export { getAllDecks, getDeck, createDeck, updateDeck, deleteDeck, getAllFlashcards, getFlashcard, createFlashcard, updateFlashcard, deleteFlashcard };

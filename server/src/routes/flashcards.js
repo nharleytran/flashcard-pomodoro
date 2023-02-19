@@ -42,6 +42,16 @@ router.get("/decks/:id", async (req, res) => {
   });
 });
 
+router.get("/decks/:deckid/flashcards/:cardid", async (req, res) => {
+  const { deckid, cardid } = req.params;
+  const card = await deckDao.readCard(deckid, cardid);
+  res.json({
+    status: 200,
+    message: `Successfully retrieved the following deck!`,
+    data: card,
+  });
+});
+
 router.post("/decks", async (req, res) => {
   const { name } = req.body;
   const deck = await deckDao.createDeck({ name });

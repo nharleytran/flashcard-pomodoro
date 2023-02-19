@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AddCardButton from "./AddCardButton";
+import EditCardButton from "./EditCardButton";
 import { Button, Card, Text } from "@mantine/core";
 import "../App.css";
 import * as deckApi from "../api";
-import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 
 function Cards(props) {
@@ -52,17 +52,10 @@ function Cards(props) {
             </Text>
           </div>
           <div className="flash-card__actions">
-            <Button
-              size="md"
-              variant="gradient"
-              gradient={{ from: "teal", to: "lime", deg: 105 }}
-              className="deck-button"
-            >
-              Edit
-            </Button>
+            <EditCardButton deckid = {id} cardid = {card._id} front = {card.front} back = {card.back} />
           </div>
         </Card>
-      ))}
+        ))}
       <AddCardButton id={id} setCards={setCards} />
     </div>
   );

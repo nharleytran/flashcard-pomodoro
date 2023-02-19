@@ -33,7 +33,8 @@ function AddDeckButton(props) {
         +
       </Button>
       <Modal
-        title="Name your deck here"
+        className="input-form"
+        title="Name Your Deck Here"
         opened={isOpen}
         onClose={handleClose}
         closeButtonLabel="Close"

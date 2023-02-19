@@ -32,7 +32,8 @@ function AddCardButton(props) {
         +
       </Button>
       <Modal
-        title="Insert information for your card here"
+        className="input-form"
+        title="Insert Information Here"
         opened={isOpen}
         onClose={handleClose}
         closeButtonLabel="Close"
@@ -46,11 +47,13 @@ function AddCardButton(props) {
           type="text"
           value={frontValue}
           onChange={(e) => setFrontValue(e.target.value)}
+          className="input-line"
         />
         <input
           type="text"
           value={backValue}
           onChange={(x) => setBackValue(x.target.value)}
+          className="input-line"
         />
         <Button key="submit" onClick={handleSubmit} className="login-button">
           Submit

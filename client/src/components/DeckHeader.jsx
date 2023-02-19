@@ -23,7 +23,7 @@ function DeckHeader(props) {
         {deck.name}
       </Text>
       <Link to={'/'}>
-      <Button>
+      <Button className="login-button">
         Back
       </Button>
       </Link>

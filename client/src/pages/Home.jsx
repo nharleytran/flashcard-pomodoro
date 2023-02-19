@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Decks from "../components/Decks";
 import Header from "../components/Header";
-import sky from '../images/sky.jpg'
 import '../App.css';
 
 function Home() {
@@ -14,7 +13,7 @@ function Home() {
     }}>
       <Header/>
       <Decks/>
-      </div>
+    </div>
   );
 }
 

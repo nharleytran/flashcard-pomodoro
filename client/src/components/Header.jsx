@@ -7,7 +7,7 @@ function Header() {
     <Text size="lg" weight={700} sx={{ fontSize: '29px' }} className="header-text">
       The Flashcard App
     </Text>
-    <Button variant="outline" color="error" className="login-button">
+    <Button className="login-button">
       Login
     </Button>
     </div>

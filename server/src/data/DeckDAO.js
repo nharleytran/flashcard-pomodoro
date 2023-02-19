@@ -41,6 +41,17 @@ class DeckDAO {
       return deck;
     }
   
+    // return the deck with the given id
+    // return null if id does not exist in our database
+    async readCard(deckid, cardid) {
+      const card = await Deck.findById(
+        deckid,
+        { cards: {_id:cardid} },
+        { new: true, runValidators: true },
+      );
+      return card;
+    }
+
     // return the updated deck
     // return null if id does not exist in our database
     async updateDeck({ id,name }) {
@@ -51,6 +62,7 @@ class DeckDAO {
       );
       return deck;
     }
+    
 
     // return the updated flashcard
     // return null if id does not exist in our database
