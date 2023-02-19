@@ -22,7 +22,7 @@ yarn dev    (start the local web app)
 Click on the link generated to view the webapp 
 
 There might be some issue with if you dont have the same dependencies, so feel free to run yarn install/ npm install 
-In case Gradescope does not have receive all the files (for some reason), please download from gitHub: 
+In case Gradescope did not receive all the files, please download from gitHub: 
 https://github.com/cs421sp23-homework/flashcards-nharleytran.git
 
 ## Infromation about the Flashcard App: ##
