@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import DeckHeader from '../components/DeckHeader';
 import StudyCard from '../components/StudyCard';
+import PomodoroClock from '../components/PomodoroClock';
 import '../App.css';
 
 function Study() {
@@ -14,6 +15,7 @@ function Study() {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover"
     }}>
+      <PomodoroClock style={{ fontSize: "6rem", fontWeight: "bold", color: "#333", margin: 0 }} />
       <DeckHeader id={id} />
       <StudyCard id={id}/>
     </div>
