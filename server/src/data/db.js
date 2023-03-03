@@ -18,7 +18,6 @@ export function connect() {
     console.log(err);
   });
 
-  mongoose.set('strictQuery', true);
   
   mongoose.connection.on("open", () => {
     console.log("Connected to MongoDB!");
