@@ -11,7 +11,7 @@ function Cards(props) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    await deckApi.getAllFlashcards(id).then((cards) => setCards(cards));
+      deckApi.getAllFlashcards(id).then((cards) => setCards(cards));
   }, [cards]);
 
   const handleDelete = async (cardId) => {
