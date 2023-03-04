@@ -5,7 +5,7 @@ Harley Tran
 ntran27
 B94A1F
 
-### Detailed instruction on how to run the app locally:
+## Detailed instruction on how to run the app locally: ##
 (This app was not deployed, so I have included the .env file on my repo even though this might not be best practice.)
 
 Run the following command in Terminal, I recommend to split terminal, one for Backend and one for Frontend
@@ -22,10 +22,12 @@ yarn dev    (start the local web app)
 Click on the link generated to view the webapp 
 
 There might be some issue with if you dont have the same dependencies, so feel free to run yarn install/ npm install 
+In case Gradescope did not receive all the files, please download from gitHub: 
+https://github.com/cs421sp23-homework/flashcards-nharleytran.git
 
-### Detailed infromation the Flashcard App:
+## Infromation about the Flashcard App: ##
 
-# Functionality
+### Functionality
  
 **Functional Requirements**
 Users can create deck
@@ -53,13 +55,13 @@ this app aims to help users engage more in their studying.
 I haven't been able to implmented authentication successfully. I was trying to use google, however,
 I have some prolonging bugs. I decided to build a different nice-to-have.
 
-# Tech Stack - MERN
+### Tech Stack - MERN
 Database: MongoDB
 Web Framework: Express.js
 Client-side Javascript Framework: React.js
 Web Server: Node.js
 
-# Process of building the app
+### Process of building the app
 I actually really enjoy building this app. One of the biggest challenge is to review on what I learned in Javascripts. 
 Another challenge come up when I tried to build authentication with Google. I tried to follow some youtube tutorials,
 however, the challenge comes from how my code has different organization than youtubers' code, which makes it easy
